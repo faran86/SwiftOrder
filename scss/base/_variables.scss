@@ -9,6 +9,8 @@ $black: #333;
 $white: #fff;
 $green: #02B652;
 $yellow: #FFDC01;
+$dark: #555;
+$light: #E4E4E4;
 
 $base-font-sans-serif: 'Roboto' ,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
@@ -34,9 +36,9 @@ $btn-padding: 22px 30px;
 $btn-font-size: 33px;
 
 // Forms
-$form-element-padding: $btn-padding !default;
-$form-element-border-color: $gray !default;
-$form-element-focus-border-color: $black !default;
+$form-element-padding: 8px 14px;
+$form-element-border-color: rgba($gray2, 0.2);
+$form-element-focus-border-color: $yellow;
 $placeholder-color: $gray !default;
 
 // Headers
