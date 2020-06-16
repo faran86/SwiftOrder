@@ -23,6 +23,7 @@
     "load-grunt-tasks": "3.5.2"
   },
   "dependencies": {
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tingle.js": "^0.15.3"
   }
 }

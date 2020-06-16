@@ -5,12 +5,17 @@
 $gray: #F5F5F5;
 $gray2: #707070;
 $gray3: #909090;
+$gray4: #EAEAEA;
+$gray5: #F2F2F2;
+$gray6: #8e8e8e;
 $black: #333;
 $white: #fff;
 $green: #02B652;
 $yellow: #FFDC01;
 $dark: #555;
 $light: #E4E4E4;
+$fill: #F8FAFC;
+$red: #EB4E4E;
 
 $base-font-sans-serif: 'Roboto' ,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
@@ -39,13 +44,13 @@ $btn-font-size: 33px;
 $form-element-padding: 8px 14px;
 $form-element-border-color: rgba($gray2, 0.2);
 $form-element-focus-border-color: $yellow;
-$placeholder-color: $gray !default;
+$placeholder-color: #B6B6B6;
 
 // Headers
 $h1-font-size: 30px !default;
-$h2-font-size: 27px !default;
-$h3-font-size: 24px !default;
-$h4-font-size: 21px !default;
+$h2-font-size: 29px !default;
+$h3-font-size: 26px !default;
+$h4-font-size: 25px !default;
 $h5-font-size: 17px !default;
 $h6-font-size: 15px !default;
 

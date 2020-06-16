@@ -2,8 +2,8 @@ $breakpoints: (
   'xs-phone': 320px,
   'phone': 480px,
   'tablet': 768px,
-  'desktop': 992px,
-  'widescreen': 1200px
+  'desktop': 1024px,
+  'widescreen': 1280px
 );
 
 // keywords
@@ -30,4 +30,5 @@ $media-expressions: (
 @import 'base/typography';
 @import 'base/forms';
 
+@import 'layout/font-awesome';
 @import 'layout/common';
