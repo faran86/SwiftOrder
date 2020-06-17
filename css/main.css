@@ -424,7 +424,8 @@ th {
 }
 
 .steps-list,
-.checklist {
+.checklist,
+.lang-area ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -4397,6 +4398,18 @@ h3 {
 
 .blocker {
 	z-index: 3;
+}
+
+.lang-area {
+	margin-top: -20px;
+	margin-bottom: 20px;
+	text-align: right;
+}
+
+.lang-area li {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 5px;
 }
 
 html[dir="rtl"] body {
