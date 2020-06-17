@@ -4129,12 +4129,44 @@ select.form-control:focus {
 }
 
 .widget-upload .prev {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 	width: 80px;
 	height: 80px;
 	overflow: hidden;
 	border: 2px dashed rgba(112, 112, 112, .2);
 	border-radius: 5px;
 	background-color: #f8fafc;
+}
+
+.widget-upload .prev:before {
+	font-family: "FontAwesome" !important;
+	font-size: 30px;
+}
+
+.widget-upload .prev.success {
+	border-color: #02b652;
+	color: #02b652;
+}
+
+.widget-upload .prev.success:before {
+	content: "\f00c";
+}
+
+.widget-upload .prev.error {
+	border-color: #eb4e4e;
+	color: #eb4e4e;
+}
+
+.widget-upload .prev.error:before {
+	content: "\f00d";
 }
 
 .widget-upload .btn-area {
