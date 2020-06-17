@@ -645,6 +645,27 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
+@font-face {
+	font-family: "din-arabic";
+	src: url("../fonts/arbfonts-urw-din-arabic.woff") format("woff"), url("../fonts/arbfonts-urw-din-arabic.woff") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "din-arabic";
+	src: url("../fonts/arbfonts-urw-din-arabic-medium.woff") format("woff"), url("../fonts/arbfonts-urw-din-arabic-medium.woff") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "din-arabic";
+	src: url("../fonts/arbfonts-urw-din-arabic-bold.woff") format("woff"), url("../fonts/arbfonts-urw-din-arabic-bold.woff") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3790,7 +3811,8 @@ body {
 	right: 0;
 }
 
-.video-slider iframe {
+.video-slider iframe,
+.video-slider video {
 	border: 0;
 	width: 100%;
 	height: 277px;
@@ -3810,10 +3832,16 @@ body {
 .logo-slider .circle {
 	display: inline-block;
 	vertical-align: top;
-	width: 75px;
-	height: 75px;
-	border: 1px solid #707070;
+	width: 80px;
+	height: 80px;
 	border-radius: 100%;
+	overflow: hidden;
+}
+
+.logo-slider .circle img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .btn {
@@ -4060,6 +4088,24 @@ label.pl-0 {
 
 .form-control.t-center {
 	text-align: center;
+}
+
+.form-control + span {
+	display: none;
+	padding: 4px;
+	color: #eb4e4e;
+}
+
+.form-control.error {
+	border-color: #eb4e4e;
+}
+
+.form-control.error + span {
+	display: block;
+}
+
+.form-control.success {
+	border-color: #02b652;
 }
 
 select.form-control {
@@ -4347,6 +4393,18 @@ h3 {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	font-size: 18px;
+}
+
+.blocker {
+	z-index: 3;
+}
+
+html[dir="rtl"] body {
+	font-family: "din-arabic";
+}
+
+html[dir="rtl"] .modal {
+	text-align: right;
 }
 
 html[dir="rtl"] .welcome-board .align {
