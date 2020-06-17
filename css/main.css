@@ -3728,6 +3728,7 @@ body {
 }
 
 .welcome-board.extra .align {
+	width: 100%;
 	padding: 30px 0;
 }
 
@@ -3735,8 +3736,8 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	padding: 25px 0 25px 15px;
 	width: calc(100% - 60px);
+	padding: 25px 15px 25px 0;
 }
 
 .welcome-board .align.align-middle {
@@ -3885,15 +3886,15 @@ body {
 	align-items: center;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
-	padding: 30px 7px 30px 15px;
 	width: 60px;
+	padding: 30px 15px 30px 7px;
 }
 
 .steps-list {
 	font-size: 20px;
 	width: 100%;
 	counter-reset: step;
-	z-index: 1;
+	z-index: 2;
 }
 
 .steps-list li {
@@ -3926,7 +3927,7 @@ body {
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	left: -29px;
+	right: -29px;
 }
 
 .steps-list li.active {
@@ -3974,10 +3975,6 @@ body {
 .form .btn-flex .btn {
 	height: 100%;
 	min-width: 150px;
-}
-
-.form .btn-flex .btn-success-outline {
-	margin-right: 20px;
 }
 
 .form .btn-holder {
@@ -4352,13 +4349,60 @@ h3 {
 	font-size: 18px;
 }
 
+html[dir="rtl"] .welcome-board .align {
+	padding: 25px 0 25px 15px;
+}
+
+html[dir="rtl"] .sidebar {
+	padding: 30px 7px 30px 15px;
+}
+
+html[dir="rtl"] .steps-list li:before {
+	right: auto;
+	left: -29px;
+}
+
+html[dir="rtl"] .checklist li {
+	padding-right: 25px;
+	padding-left: 0;
+}
+
+html[dir="rtl"] .checklist .bullet {
+	left: auto;
+	right: 0;
+}
+
+html[dir="rtl"] .custom-checkbox .fake-label {
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+html[dir="rtl"] label {
+	padding-left: 0;
+	padding-right: 8px;
+}
+
+html[dir="rtl"] label.pl-0 {
+	padding-right: 0;
+}
+
+html[dir="rtl"] .video-slider .slick-prev {
+	left: auto;
+	right: 0;
+}
+
+html[dir="rtl"] .video-slider .slick-next {
+	left: 0;
+	right: auto;
+}
+
 @media (min-width: 480px) {
 	.welcome-board .align {
 		width: calc(100% - 115px);
 	}
 
 	.welcome-board .align {
-		padding-left: 30px;
+		padding-right: 30px;
 	}
 
 	.welcome-board .d-link {
@@ -4372,8 +4416,8 @@ h3 {
 
 	.sidebar {
 		width: 150px;
-		padding: 30px 15px 30px 75px;
-		margin-left: -35px;
+		padding: 30px 75px 30px 15px;
+		margin-right: -35px;
 	}
 
 	.steps-list li:before {
@@ -4381,7 +4425,7 @@ h3 {
 		line-height: 41px;
 		width: 45px;
 		height: 45px;
-		left: -55px;
+		right: -55px;
 	}
 
 	.steps-list li.completed:before {
@@ -4390,6 +4434,20 @@ h3 {
 
 	.modal {
 		width: 452px;
+	}
+
+	html[dir="rtl"] .welcome-board .align {
+		padding-left: 30px;
+	}
+
+	html[dir="rtl"] .sidebar {
+		padding: 30px 15px 30px 75px;
+		margin-left: -35px;
+		margin-right: 0;
+	}
+
+	html[dir="rtl"] .steps-list li:before {
+		left: -55px;
 	}
 }
 
@@ -4429,7 +4487,7 @@ h3 {
 	}
 
 	.steps-list li:before {
-		left: -62px;
+		right: -62px;
 	}
 
 	.steps-list li > i {
@@ -4465,20 +4523,33 @@ h3 {
 	h3 {
 		font-size: 26px;
 	}
+
+	html[dir="rtl"] .steps-list li:before {
+		left: -62px;
+	}
+
+	html[dir="rtl"] label {
+		padding-right: 13px;
+		padding-left: 0;
+	}
 }
 
 @media (min-width: 1024px) {
 	.welcome-board .align {
-		padding: 62px 0 62px 74px;
+		padding: 62px 74px 62px 0;
 	}
 
 	.sidebar {
-		padding-right: 38px;
+		padding-left: 38px;
 	}
 
 	.form {
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+
+	.form .btn-flex .btn-success-outline {
+		margin-right: 20px;
 	}
 
 	.form-row .col {
@@ -4527,6 +4598,18 @@ h3 {
 	h2 {
 		font-size: 29px;
 	}
+
+	html[dir="rtl"] .welcome-board .align {
+		padding: 62px 0 62px 74px;
+	}
+
+	html[dir="rtl"] .sidebar {
+		padding-right: 38px;
+	}
+
+	html[dir="rtl"] .checklist li {
+		padding-right: 50px;
+	}
 }
 
 @media (min-width: 1280px) {
@@ -4572,9 +4655,7 @@ h3 {
 	.steps-list li > span {
 		display: none;
 	}
-}
 
-@media (max-width: 479px) {
 	.form .btn-flex {
 		padding-left: 0;
 		padding-right: 0;

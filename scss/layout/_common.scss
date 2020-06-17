@@ -43,14 +43,15 @@ body{
 		text-align: center;
 
 		.align{
+			width: 100%;
 			padding: 30px 0;
 		}
 	}
 
 	.align{
 		display: flex;
-		padding: 25px 0 25px 15px;
 		width: calc(100% - 60px);
+		padding: 25px 15px 25px 0;
 
 			@include media('>=phone'){
 				width: calc(100% - 115px);
@@ -63,11 +64,11 @@ body{
 			}
 
 			@include media('>=phone'){
-				padding-left: 30px;
+				padding-right: 30px;
 			}
 
 			@include media('>=desktop'){
-				padding: 62px 0 62px 74px;
+				padding: 62px 74px 62px 0;
 			}
 
 		&.align-middle{
@@ -239,13 +240,13 @@ body{
 	display: flex;
 	align-items: center;
 	flex-shrink: 0;
-	padding: 30px 7px 30px 15px;
 	width: 60px;
+	padding: 30px 15px 30px 7px;
 
 		@include media('>=phone'){
 			width: 150px;
-			padding: 30px 15px 30px 75px;
-			margin-left: -35px;
+			padding: 30px 75px 30px 15px;
+			margin-right: -35px;
 		}
 
 		@include media('>=tablet'){
@@ -253,7 +254,7 @@ body{
 		}
 
 		@include media('>=desktop'){
-			padding-right: 38px;
+			padding-left: 38px;
 		}
 
 		@include media('>=widescreen'){
@@ -266,7 +267,7 @@ body{
 	font-size: 20px;
 	width: 100%;
 	counter-reset: step;
-	z-index: 1;
+	z-index: 2;
 
 		@include media('>=widescreen'){
 			font-size: 37px;
@@ -303,17 +304,17 @@ body{
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-			left: -29px;
+			right: -29px;
 
 				@include media('>=phone'){
 					font-size: 20px;
 					line-height: 41px;
 					@include size(45px);
-					left: -55px;
+					right: -55px;
 				}
 
 				@include media('>=tablet'){
-					left: -62px;
+					right: -62px;
 				}
 		}
 
@@ -394,7 +395,7 @@ body{
 				}
 			}
 
-			@include media('<phone'){
+			@include media('<tablet'){
 				padding-left: 0;
 				padding-right: 0;
 
@@ -419,7 +420,9 @@ body{
 		}
 
 		.btn-success-outline{
-			margin-right: 20px;
+			@include media('>=desktop'){
+				margin-right: 20px;
+			}
 		}
 	}
 
@@ -860,5 +863,103 @@ h3{
 
 	@include media('>=tablet'){
 		font-size: $h3-font-size;
+	}
+}
+
+html{
+	&[dir="rtl"]{
+		.welcome-board{
+			.align{
+				padding: 25px 0 25px 15px;
+
+					@include media('>=phone'){
+						padding-left: 30px;
+					}
+
+					@include media('>=desktop'){
+						padding: 62px 0 62px 74px;
+					}
+			}
+		}
+
+		.sidebar{
+			padding: 30px 7px 30px 15px;
+
+			@include media('>=phone'){
+				padding: 30px 15px 30px 75px;
+				margin-left: -35px;
+				margin-right: 0;
+			}
+
+			@include media('>=desktop'){
+				padding-right: 38px;
+			}
+		}
+
+		.steps-list{
+			li{
+				&:before{
+					right: auto;
+					left: -29px;
+
+						@include media('>=phone'){
+							left: -55px;
+						}
+
+						@include media('>=tablet'){
+							left: -62px;
+						}
+				}
+			}
+		}
+
+		.checklist{
+			li{
+				padding-right: 25px;
+				padding-left: 0;
+
+					@include media('>=desktop'){
+						padding-right: 50px;
+					}
+			}
+
+			.bullet{
+				left: auto;
+				right: 0;
+			}
+		}
+
+		.custom-checkbox{
+			.fake-label{
+				padding-left: 0;
+				padding-right: 10px;
+			}
+		}
+
+		label{
+			padding-left: 0;
+			padding-right: 8px;
+
+				@include media('>=tablet'){
+					padding-right: 13px;
+					padding-left: 0;
+				}
+
+			&.pl-0{
+				padding-right: 0;
+			}
+		}
+
+		.video-slider{
+			.slick-prev{
+				left: auto;
+				right: 0;
+			}
+
+			.slick-next{
+				left: 0;
+				right: auto;
+			}
+		}
 	}
 }
