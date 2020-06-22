@@ -4196,26 +4196,14 @@ select.form-control:focus {
 	color: #909090;
 }
 
-.btn-upload:before {
-	content: "Upload";
-}
-
 .btn-upload.success {
 	background: #02b652;
 	color: #fff;
 }
 
-.btn-upload.success:before {
-	content: "Uploaded";
-}
-
 .btn-upload.error {
 	background: #eb4e4e;
 	color: #fff;
-}
-
-.btn-upload.error:before {
-	content: "Failed";
 }
 
 .text-red {
@@ -4230,8 +4218,19 @@ select.form-control:focus {
 	border-radius: 5px;
 	background: #f2f2f2;
 	border: 1px solid rgba(112, 112, 112, .2);
-	padding: 10px 30px 0 15px;
+	padding: 10px 15px 0;
 	margin-bottom: 20px;
+}
+
+.gray-block .title {
+	display: block;
+	text-align: center;
+	background: #8f8f8f;
+	color: #fff;
+	padding: 10px;
+	margin-bottom: 20px;
+	margin-left: -15px;
+	margin-right: -15px;
 }
 
 .gray-block input.form-control {
